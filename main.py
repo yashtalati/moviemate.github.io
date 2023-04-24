@@ -2,7 +2,6 @@ import json
 import pickle
 import streamlit as st
 import requests
-from streamlit_lottie import st_lottie
 import base64
 
 
@@ -22,18 +21,6 @@ def add_bg_from_local(image_file):
     )
 
 add_bg_from_local('b1.jpg')
-
-def load_lottieurl(url: str):
-    r = requests.get(url)
-    if r.status_code != 200:
-        return None
-    return r.json()
-
-
-lottie_hello = load_lottieurl("https://assets7.lottiefiles.com/packages/lf20_khzniaya.json")
-# lottie_width = 150
-# lottie_height = 150
-
 
 
 
@@ -59,7 +46,13 @@ def recommend(movie):
     return recommended_movie_names,recommended_movie_posters
 
 movies = pickle.load(open('mov.pkl','rb'))
-similarity = pickle.load(open('similarity.pkl','rb'))
+# similarity = pickle.load(open('similarity.pkl','rb'))
+import gzip
+
+
+with gzip.open('similarity.pkl.gz', 'rb') as f:
+    similarity = pickle.load(f)
+
 
 movie_list = movies['title'].values
 
@@ -110,8 +103,6 @@ if st.button('Show Recommendation'):
     with col5:
         st.text(recommended_movie_names[4])
         st.image(recommended_movie_posters[4])
-
-# st_lottie(lottie_hello, speed=1, width=90 ,  height=90,  key="hello")
 
 
 
