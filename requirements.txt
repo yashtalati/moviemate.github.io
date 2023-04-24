@@ -1,3 +1,40 @@
-Requests==2.28.2
-streamlit==1.21.0
-streamlit_lottie==0.0.3
+Name: streamlit
+Version: 1.21.0
+Summary: The fastest way to build data apps in Python
+Home-page: https://streamlit.io
+Author: Snowflake Inc
+Author-email: hello@streamlit.io
+License: Apache License 2.0
+Location: c:\users\admin\appdata\local\programs\python\python39\lib\site-packages
+Requires: altair, blinker, cachetools, click, gitpython, importlib-metadata, numpy, packaging, pandas, pillow, protobuf, pyarrow, pydeck, pympler, python-dateutil, requests, rich, toml, tornado, typing-extensions, tzlocal, validators, watchdog
+Required-by: streamlit-lottie
+
+Name: pandas
+Version: 1.4.0
+Summary: Powerful data structures for data analysis, time series, and statistics
+Home-page: https://pandas.pydata.org
+Author: The Pandas Development Team
+Author-email: pandas-dev@python.org
+License: BSD-3-Clause
+Location: c:\users\admin\appdata\local\programs\python\python39\lib\site-packages
+Requires: numpy, python-dateutil, pytz
+Required-by: altair, bar-chart-race, geopandas, mlxtend, streamlit, twint
+
+
+Name: requests
+Version: 2.25.1
+Summary: Python HTTP for Humans.
+Home-page: https://requests.readthedocs.io
+Author: Kenneth Reitz
+Author-email: me@kennethreitz.org
+License: Apache 2.0
+Location: c:\users\admin\appdata\local\programs\python\python39\lib\site-packages
+Requires: certifi, chardet, idna, urllib3
+Required-by: gmplot, googletransx, spacy, streamlit, vaderSentiment, yarg
+
+Name: numpy
+Version: 1.22.1
+
+Name: nltk
+Version: 3.7
+
